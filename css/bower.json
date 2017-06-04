@@ -1,0 +1,15 @@
+{
+  "name": "framework",
+  "description": "Framework for portfolio",
+  "license": "MIT",
+  "dependencies": {
+    "bitters": "~1.1.0",
+    "bourbon": "~4.2.5"
+  },
+  "devDependencies": {
+    "bitters": "~1.1.0"
+  },
+  "resolutions": {
+    "jquery": "~1.11.3"
+  }
+}

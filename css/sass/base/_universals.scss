@@ -1,0 +1,270 @@
+/* ==================================================
+   Basic Styles
+================================================== */
+
+html, body { 
+	height: 100%; 
+	-webkit-text-size-adjust: 100%; 
+}
+
+body { 
+	background-color: $white;
+	color: $black; 
+	font-family: $primary-font;
+	font-feature-settings: normal !important;
+	font-size: 15px;  
+	margin: 0; 
+	overflow-x: hidden;
+	padding: 0;
+}
+
+a:not( .button ) { 
+	color: $primary-color; 
+	@extend %primary-transition;
+	text-decoration: none;
+
+	&:hover { 
+		text-decoration: underline;
+	}
+
+	&:active, &:focus {
+		color: $primary-color;
+	}
+}
+
+:focus { 
+	outline: none; 
+}
+
+
+/* ==================================================
+   Grid
+================================================== */
+
+.col { 
+	@include box-sizing(); 
+	float: left; 
+	padding-left: 25px; 
+	padding-right: 25px; 
+	position: relative; 
+	width: 100%; 
+}
+
+.row { 
+	// margin: 0 -25px;
+	margin: 0;
+	margin-top: 50px;
+	position: relative; 
+
+	&:after { 
+		clear: both; 
+		content: " ";
+		display: table;
+	} 
+}
+
+@include desktop {
+	@for $i from 1 through 12 { 
+		.col-#{ $i } { 
+			width: $i * 8.333333333333332%; 
+		} 
+	}
+}
+
+
+/* ==================================================
+   Typography
+================================================== */
+
+h1, h2, h3 { 
+	font-family: $primary-font; 
+	font-weight: $normal;
+	line-height: 1.15em;  
+	margin-bottom: 1rem;
+}
+
+h4, h5, h6 { 
+	font-family: $primary-font;
+	line-height: 1.25em; 
+	font-weight: $normal; 
+	margin-bottom: 1rem; 
+}
+
+p, ul li { 
+	font-family: $primary-font;
+	line-height: 1.5em; 
+	font-weight: $normal; 
+}
+
+p, body ul { 
+	margin-bottom: 1.25rem;
+}
+
+body h1 { 
+	font-size: 38px; 
+
+	@include phone { 
+		font-size: 47px; 
+	}
+
+	@include smalltablet { 
+		font-size: 50px; 
+	}
+
+	@include tablet { 
+		font-size: 55px; 
+	}
+
+	@include desktop { 
+		font-size: 60px; 
+	}
+}
+
+body h2 { 
+	font-size: 20px;
+
+	@include phone { 
+		font-size: 23px; 
+	}
+
+	@include smalltablet { 
+		font-size: 32px; 
+	}
+
+	@include tablet { 
+		font-size: 35px; 
+	}
+
+	@include desktop { 
+		font-size: 40px; 
+	}
+}
+
+body h3 { 
+	font-size: 20px;
+
+	@include phone { 
+		font-size: 22px; 
+	}
+
+	@include smalltablet { 
+		font-size: 24px; 
+	}
+
+	@include tablet { 
+		font-size: 26px; 
+	}
+
+	@include desktop { 
+		font-size: 28px; 
+	}
+}
+
+body h4 { 
+	font-size: 17px;
+
+	@include phone { 
+		font-size: 18px; 
+	}
+
+	@include smalltablet { 
+		font-size: 20px; 
+	}
+
+	@include tablet { 
+		font-size: 22px; 
+	}
+
+	@include desktop { 
+		font-size: 24px; 
+	}
+}
+
+body p, body h5, body ul li, body ol li { 
+	font-size: 15px;
+
+	@include tablet { 
+		font-size: 17px; 
+	}
+
+	@include desktop { 
+		font-size: 18px; 
+	}
+}
+
+
+/* ==================================================
+   Containers
+================================================== */
+
+.container { 
+	margin: 0 auto; 
+	max-width: 1400px; 
+	padding: 70px 10%; 
+	position: relative;
+	width: 80%;
+
+	&:after { 
+		clear: both; 
+		content: " ";
+		display: table;
+	} 
+}
+
+.clearfix:after { 
+	clear: both; 
+	content: " "; 
+	display: table; 
+}
+
+
+/* ==================================================
+   Universals
+================================================== */
+
+// Basic styles for a button. Remove or modify as you please
+
+a.button {
+	@include appearance( none );
+	border: 3px solid;
+	border-radius: 0;
+	@include box-sizing();
+	@include button-effect( $primary-color );
+	color: $white;
+	display: inline-block; 
+	font-size: 16px; 
+	font-family: $primary-font;
+	letter-spacing: 1px;
+	line-height: 1.25em;
+	overflow: hidden;
+	padding: 6px 16px;
+	position: relative; 
+	@extend %primary-transition;
+	text-decoration: none; 
+	text-transform: uppercase;
+
+	&.bottom-margin {
+		margin-bottom: 1rem;
+	}
+}
+
+ul, ol {
+	list-style-type: disc;
+	margin-left: 50px;
+	padding: 0;
+
+	ul, ol {
+		margin: 0; 
+		margin-top: 0.5rem;
+	}
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+.main {
+	background-color: $white;
+	overflow: hidden;
+	position: relative;
+}

@@ -1,0 +1,158 @@
+.development-section {
+	background-color: $black; 
+	color: $white;
+	height: auto;
+	width: 100%;
+
+	h1 {
+		color: $primary-color;
+		font-family: $secondary-font;
+		font-size: 45px;
+		text-align: center;
+		width: 100%;
+
+		@include desktop {
+			font-size: 50px;
+		}
+	}
+
+	hr {
+		color: $light-gray;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+.dev-row {
+	height: auto;
+	margin: 70px 0;
+	width: 100%;
+
+	h2 {
+		color: $light-gray;
+		font-family: $primary-font;
+		font-size: 30px;
+		font-weight: $bold; 
+		margin-bottom: 40px;
+		text-align: center;
+		word-break: break-word;
+	}
+}
+
+// span for c2e and vw
+.dev-client-13 {
+	float: left;
+	@include rotate(-90deg);
+
+	span {
+		color: $secondary-color;
+		font-family: $primary-font;
+		font-size: 30px;
+		font-weight: $bold; 
+	}
+}
+
+// img div for c2e and vw
+.dev-img-13, .dev-img-24 {
+	display: table;
+	float: none;
+	height: auto;
+	margin: 0 auto;
+	width: 100%;
+
+	@include largedesktop {
+		display: inline-block;
+		width: 45%
+	}
+}
+
+// text div for c2e and vw
+.dev-info-13, .dev-info-24 {
+	display: table;
+	float: none;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 0 10px;
+	width: 100%;
+
+	@include largedesktop {
+		display: inline-block;
+		width: 50%;
+	}
+
+	p {
+		color: $white;
+		font-family: $primary-font;
+	}
+}
+
+// img div for c2e and vw
+.dev-img-13 {
+	@include largedesktop {
+		float: left;
+	}
+}
+
+// text div for c2e and vw
+.dev-info-13 {
+	@include largedesktop {
+		float: right;
+		margin-left: 20px;
+	}
+}
+
+// img div for cmg and port
+.dev-img-24 {
+	@include largedesktop {
+		float: right;
+	}
+}
+
+// text div for cmg and port
+.dev-info-24 {
+	@include desktop {
+		float: left;
+	}
+}
+
+// view mockup/source div
+.dev-links {
+	display: block;
+	height: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.dev-links-container {
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 100%;
+
+	.button {
+		margin: 25px 25px 0px;
+	}
+}
+
+.dev-links .dev-links-container a.button, a.button {
+	background-color: $secondary-color;
+	border-color: $secondary-color;
+}
+
+.dev-links .dev-links-container a.button:hover, a.button.hovered {
+	background-color: transparent;
+	color: $secondary-color;
+}
+
+#dev-ex1, #dev-ex2, #dev-ex3, #dev-ex4 {
+	display: inline-table;
+	height: auto;
+
+	#dev-c2e-info {
+		p {
+			color: $white;
+			font-family: $primary-font;
+		}
+	}
+}
+

@@ -1,0 +1,119 @@
+/* Variables */
+
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Courgette', cursive;
+$primary-color: #f1ab86; //salmon
+$secondary-color: #f26157; //dark pink
+$light-gray: #C8C8C8; //light gray
+$white: #fff;
+$black: #000;
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+$extrabold: 900;
+
+
+/* Mixins */
+
+// Box sizing browser compatibility
+
+$boxsizing-default: border-box !default;
+
+@mixin box-sizing( $boxsizing: $boxsizing-default ) {
+    -webkit-box-sizing: $boxsizing;
+    -moz-box-sizing: $boxsizing;
+    box-sizing: $boxsizing;
+}
+
+// Button effect
+
+$hover-default: $white !default;
+
+@mixin button-effect( $color, $hover: $hover-default ) { 
+    background-color: $color;
+    border-color: $color;
+    color: $hover;
+
+    &:hover, &.hovered {
+        background-color: transparent;
+        color: $color;
+    }
+}
+
+// Rotate effect
+
+$rotate-default: -90deg !default;
+
+ @mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+/* Media Queries */
+
+$phone: 480px;
+$smalltablet: 650px;
+$tablet: 767px;
+$desktop: 1000px;
+$largedesktop: 1250px;
+
+@mixin phone {
+
+    @media ( min-width: #{ $phone } ) {
+        @content;
+    }
+
+}
+
+@mixin smalltablet {
+
+    @media ( min-width: #{ $smalltablet } ) {
+        @content;
+    }
+
+}
+
+@mixin tablet {
+
+    @media ( min-width: #{ $tablet } ) {
+        @content;
+    }
+
+}
+
+@mixin desktop {
+
+    @media ( min-width: #{ $desktop } ) {
+        @content;
+    }
+
+}
+
+@mixin largedesktop {
+
+    @media ( min-width: #{ $largedesktop } ) {
+        @content;
+    }
+
+}
+
+
+/* Placeholders */
+
+%vertical-align { 
+    top: -135px; 
+    @include transform( translateY( 135px ) ); 
+}
+
+%horizontal-align { 
+    left: 50%; 
+    @include transform( translateX( -50% ) ); 
+}
+
+%primary-transition { 
+    @include transition( all 0.25s ease-in-out ); 
+}

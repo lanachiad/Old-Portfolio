@@ -1,0 +1,115 @@
+.writing-section {
+	background-color: $light-gray;
+	height: auto;
+	width: 100%;
+
+	h1 {
+		color: $black;
+		font-family: $secondary-font;
+		font-size: 50px;
+		text-align: center;
+		width: 100%;
+	}
+
+	hr {
+		color: $primary-color;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+.writing-row {
+	height: auto;
+	margin: 70px 0;
+	width: 100%;
+
+	h2 {
+		color: $white;
+		font-family: $primary-font;
+		font-size: 30px;
+		font-weight: $bold; 
+		margin-bottom: 40px;
+		text-align: center;
+	}
+} 
+
+// img div for c2e and vw
+.writing-img {
+	border: 2px $light-gray solid;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px;
+	width: 100%;
+}
+
+// text div for c2e and vw
+.writing-info {
+	display: block;
+	margin: 30px 0;
+	padding: 0 10px;
+	width: 100%;
+
+	p {
+		color: $black;
+		font-family: $primary-font;
+	}
+
+	a {
+		color: $secondary-color;
+	}
+}
+
+// img div for cmg and port
+.writing-img-24 {
+	float: right;
+	height: auto;
+	width: 45%;
+}
+
+// text div for cmg and port
+.writing-info-24 {
+	float: left;
+	padding: 0 10px;
+	width: 50%;
+
+	p {
+		color: $white;
+		font-family: $primary-font;
+	}
+}
+
+// view mockup/source div
+.writing-links {
+	display: block;
+	height: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.writing-links-container { 
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.writing-links .writing-links-container a.button, a.button {
+	background-color: $secondary-color;
+	border-color: $secondary-color;
+}
+
+.writing-links .writing-links-container a.button:hover, a.button.hovered {
+	background-color: transparent;
+	color: $secondary-color;
+}
+
+#writing-ex1, #writing-ex2, #writing-ex3, #writing-ex4 {
+	display: block;
+	height: auto;
+
+	#writing-info {
+		p {
+			color: $black;
+			font-family: $primary-font;
+		}
+	}
+}

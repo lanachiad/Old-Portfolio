@@ -1,0 +1,23 @@
+.introduction {
+	background-color: $white;
+	height: auto;
+	width: 100%;
+}
+
+.intro-wrapper {
+	width: 100%;
+
+	p {
+		color: $black;
+		font-family: $primary-font;
+		font-weight: $semibold;
+	}
+
+	h3 {
+		color: $secondary-color;
+		font-family: $secondary-font;
+		margin-bottom: 0px;
+		padding-top: 20px;
+		text-align: right;
+	}
+}

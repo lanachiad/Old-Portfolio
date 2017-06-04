@@ -1,0 +1,42 @@
+.topMenu {
+  background-color: $primary-color;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  display: none;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  @include desktop {
+    height: 60px;
+  }
+
+  ul {
+  	list-style-type: none;
+  	margin: 15px 0;
+  	text-align: center;
+  } 
+
+  li {
+  	color: $white;
+  	display: inline;
+  	font-weight: $bold;
+  	margin: 0 25px;
+  	text-align: center;
+
+  	@include desktop {
+  		margin: 0 20px;
+  	}
+  }
+
+  a {
+  	color: $white;
+  	text-decoration: none;
+  }
+
+  #important {
+  	color: $secondary-color;
+  }
+}

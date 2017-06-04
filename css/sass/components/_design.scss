@@ -1,0 +1,113 @@
+.design-section {
+	background-color: $white;
+	height: auto;
+	width: 100%;
+
+	h1 {
+		color: $black;
+		font-family: $secondary-font;
+		font-size: 50px;
+		text-align: center;
+		width: 100%;
+	}
+
+	hr {
+		color: $light-gray;
+		margin: 0 auto;
+		width: 80%;
+	}
+}
+
+.design-row {
+	height: auto;
+	margin: 70px 0;
+	width: 100%;
+
+	h2 {
+		color: $primary-color;
+		font-family: $primary-font;
+		font-size: 30px;
+		font-weight: $bold; 
+		margin-bottom: 40px;
+		text-align: center;
+	}
+} 
+
+.design-img {
+	border: 2px $light-gray solid;
+	display: block;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px;
+	width: 100%;
+
+	img {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+.design-info {
+	display: block;
+	margin: 30px 0;
+	padding: 0 10px;
+	width: 100%;
+
+	p {
+		color: $black;
+		font-family: $primary-font;
+	}
+}
+
+.design-img-24 {
+	float: right;
+	height: auto;
+	width: 45%;
+}
+
+.design-info-24 {
+	float: left;
+	padding: 0 10px;
+	width: 50%;
+
+	p {
+		color: $white;
+		font-family: $primary-font;
+	}
+}
+
+.design-links {
+	display: block;
+	height: auto;
+	text-align: center;
+	width: 100%;
+} 
+
+.design-links-container {
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.design-links .design-links-container a.button, a.button {
+	background-color: $secondary-color;
+	border-color: $secondary-color;
+}
+
+.design-links .design-links-container a.button:hover, a.button.hovered {
+	background-color: transparent;
+	color: $secondary-color;
+}
+
+#design-ex1, #design-ex2, #design-ex3, #design-ex4 {
+	display: block;
+	height: auto;
+
+	#design-info {
+		p {
+			color: $black;
+			font-family: $primary-font;
+		}
+	}
+}

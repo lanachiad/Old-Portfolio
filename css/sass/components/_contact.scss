@@ -1,0 +1,26 @@
+.contact-section {
+	background-color: $black;
+	color: $white;
+	height: auto;
+	width: 100%;
+
+	h1 {
+		color: $primary-color;
+		font-family: $secondary-font;
+		text-align: center;
+	}
+
+	p {
+		font-family: $primary-font;
+		margin-top: 50px;
+	}
+
+	#contact-links {
+		margin-top: 50px;
+		text-decoration: none;
+	}
+
+	a:not(.button):hover {
+		text-decoration: none;
+	}
+}

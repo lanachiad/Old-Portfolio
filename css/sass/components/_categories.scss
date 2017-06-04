@@ -1,0 +1,178 @@
+.categories {
+	background-color: $light-gray;
+	height: auto;
+	width: 100%;
+
+	.container {
+		width: 70%;
+
+		h1 {
+			color: $black;
+			font-family: $secondary-font;
+			font-size: 50px;
+			text-align: center;
+		}
+	}
+
+	#development-circle {
+	background: url("../images/development-icon.png");
+	
+		h3 {
+			left: 35px;
+
+			@include tablet {
+				left: 20px;
+			}
+
+			@include desktop {
+				left: 65px;
+			}
+		}
+	}
+
+	#design-circle {
+		background: url("../images/design-icon.png");
+
+		h3 {
+			left: 65px;
+
+			@include tablet {
+				left: 60px;
+			}
+
+			@include desktop {
+				left: 105px;
+			}
+		}
+	}
+
+	#writing-circle {
+		background: url("../images/writing-icon2.png");
+
+		h3 {
+			left: 60px;
+
+			@include tablet {
+				left: 55px;
+			}
+
+			@include desktop {
+				left: 103px;
+			}
+		}
+	}
+
+	#resume-circle {
+		background: url("../images/resume-icon2.png");
+
+		h3 {
+			left: 60px;
+
+			@include tablet {
+				left: 50px;
+			}
+
+			@include desktop {
+				left: 98px;
+			}
+		}
+	} 
+
+	#development-circle, #design-circle, #writing-circle, #resume-circle {
+		background-position: center;
+		background-repeat: no-repeat;
+    	background-size: cover; 
+		float: none;
+		margin: 0 auto;
+
+		h3 {
+			bottom: 50px;
+			color: $black;
+			font-family: $primary-font;
+			font-weight: $bold;
+			opacity: 0;
+			position: absolute;
+			text-align: center;
+			z-index: 1;
+		}
+
+		&:after {
+			border-radius: 50%;
+			content: "";
+			height: 95%;
+			left: 7px;
+			position: absolute;
+			@extend %primary-transition;
+			top: 7px;
+			width: 95%;
+
+			@include desktop {
+				left: 9px;
+			}
+		}
+
+		&:hover {
+			h3 {
+				max-height: 75px;
+				opacity: 1;
+				@extend %primary-transition;
+				z-index: 1;
+			}
+
+			&:after {
+				background-color: rgba($secondary-color, 0.55);
+				z-index: 0;
+			}
+		}
+	}
+
+	#development-circle, #writing-circle {
+		margin: 0 auto;
+
+		@include desktop {
+    		float: left;
+    		margin-left: 50px;
+		}
+	}
+
+	#design-circle, #resume-circle {
+		margin: 0 auto;
+		margin-top: 50px;
+
+	    @include desktop {
+    		float: right;
+    		margin-right: 50px;
+    		margin-top: 0px;
+    	}
+	}
+
+	.category {
+		height: 200px;
+		width: 200px;
+
+		@include desktop {
+			height: 300px;
+			width: 300px;
+		}
+	}
+}
+
+.back-to-top {
+	height: 30px;
+	text-align: center;
+	width: 100%;
+
+	a:not(.button):hover {
+		font-size: 30px;
+		text-decoration: none;
+	}
+
+	span {
+		margin: 0 30px;
+
+		&:hover {
+			font-size: 30px;
+			margin: 0 20px;
+		}
+	}
+}

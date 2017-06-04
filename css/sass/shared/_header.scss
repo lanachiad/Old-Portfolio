@@ -1,0 +1,82 @@
+.header {
+	background-color: $primary-color;
+	@include box-sizing;
+	height: auto; 
+	width: 100%;
+}
+
+#title {
+	width: 100%;
+
+	h1 {
+		color: $white;
+		font-family: $secondary-font; 
+		text-align: center;
+	}
+}
+
+.job-titles {
+	height: auto;
+	padding-top: 40px;
+	width: 100%;
+}
+
+#developer, #writer {
+	color: $black;
+	font-family: $primary-font;
+	width: 50%;
+
+	h2 {
+		font-size: 35px;
+		font-weight: $bold;
+	}
+}
+
+#developer {
+	display: table;
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+
+	@include desktop { 
+		float: left;
+		text-align: left;
+	}
+}
+
+#writer {
+	display: table;
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+
+	@include desktop {
+		float: right;
+		text-align: right;
+	}
+
+	h2 {
+		margin-top: 30px;
+
+		@include desktop {
+			margin-top: 0px;
+		}
+	}
+}
+
+#contact-links {
+	display: block;
+	margin-top: 50px;
+	text-align: center;
+	width: 100%;
+
+	@include desktop {
+		margin-top: 100px;
+	}
+
+	img {
+		height: 75px;
+		margin: 0 10px;
+		width: 75px;
+	}
+}
